@@ -1,4 +1,4 @@
-# Star Wars Quizs
+# Star Wars Quiz
 
 *Description*: Star wars quiz is a wizard style quiz to test an individual's prowess in Star Wars
 
