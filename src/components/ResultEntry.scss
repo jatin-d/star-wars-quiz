@@ -1,0 +1,23 @@
+@import "../styles/stylesUtils.scss";
+
+.resultCard{
+    @extend .border-btn;
+    padding: 10px;
+    background-color: $color-panel-background;
+    margin: 10px 0;
+    p{
+      font-size: $font-small;
+      font-family: $font-options; 
+    }
+    .ansResult{
+      font-weight: bold;
+      color: green;
+    }
+    .emphText{
+      font-weight: bold;
+      color: red;
+    }
+    .quePrompt{
+      color: aqua;
+    }
+}

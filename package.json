@@ -10,6 +10,7 @@
     "@types/node": "^12.20.15",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -39,5 +40,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.8",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
+    "babel-plugin-react-remove-properties": "^0.3.0",
+    "enzyme": "^3.11.0"
   }
 }

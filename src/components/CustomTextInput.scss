@@ -1,0 +1,21 @@
+@import "../styles/stylesUtils.scss";
+
+.questionWrapper{
+    @include flexParameters;
+    flex-direction: column;
+    .question{
+        @extend .question
+    }
+    .textArea {
+        -webkit-appearance: none;
+        height: 100%;
+        @extend .border;
+        border-radius: 5px;
+        width: 350px;
+        margin: 90px auto;
+        text-align: start;
+        height: 100px;
+        font-size: $font-large;
+        font-family: $font-options;
+    }
+}

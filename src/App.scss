@@ -1,0 +1,39 @@
+
+@import "./styles/stylesUtils.scss";
+
+button {
+    @extend .btn-primary; 
+}
+button:disabled {
+    @extend .btn-disabled;
+}
+
+.appContainer{
+    @include flexParameters;
+    @extend .border;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: $color-panel-background;
+    box-shadow: 2px 2px 3px $color-border;
+    h1 {
+        @include textParameters;
+        font-size: $font-large;
+        font-family: $font-heading;
+    }
+    h2 {
+        @include textParameters;
+        font-size: $font-medium;
+        font-family: $font-sub-heading;
+        color: $color-fontSecondary
+    }
+    p {
+        @include textParameters;
+        font-size: $font-small;
+        padding: 0;
+    }
+}
+
+.navigationButtonsContainer, .submitButtonContainer{
+    @include flexParameters;
+}
