@@ -16,3 +16,11 @@
 - Styling of the UI is done with SCSS processor
 - Re-usable components are created to display questions and final result entries
 - Unit testing is implemented to showcase the implementation approach
+
+# How to run the app?
+
+1. execute `git clone https://github.com/jatin-d/star-wars-quiz.git` to clone the repo
+2. execute `cd star-wars-quiz` to go to project dir
+3. execute `npm install` which will pull required dependencies
+4. execute `npm start` to run the app and visit `http://localhost:3000` to test the app
+5. execute `npm test` to run unit tests for the app
