@@ -5,8 +5,8 @@
     flex-direction: column;
     justify-content: center;
     margin: 20px 0;
-    .question{
-        @extend .question
+    p {
+        @include question
     }
     .optionsContainer{
         padding: 10px;
@@ -30,6 +30,20 @@
             margin: 0;
             font-size: $font-medium;
             font-family: $font-options;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .questionWrapper{
+        p {
+            font-size: 0;
+            font-size: $font-media-small;
+        }
+        .optionsContainer{
+            label {
+                font-size: $font-media-medium;
+            }
         }
     }
 }

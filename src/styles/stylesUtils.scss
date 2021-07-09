@@ -16,10 +16,16 @@ $font-medium: 25px;
 $font-small: 20px;
 $font-mini: 15px;
 
-$font-options:'Indie Flower', cursive;
+$font-media-large: 25px;
+$font-media-big: 20px;
+$font-media-medium: 15px;
+$font-media-small: 12px;
+$font-media-mini: 10px;
+
+$font-options: 'Abel', sans-serif;
 $font-heading:'Tourney', cursive;
 $font-sub-heading:'Rajdhani', sans-serif;
-$font-question:'Indie Flower', cursive;
+$font-question: 'Abel', sans-serif;
 
 @mixin flexParameters {
     display: flex;
@@ -32,7 +38,7 @@ $font-question:'Indie Flower', cursive;
     padding: 10px;
 }
 
-.question{
+@mixin question{
     font-family: $font-question;
     font-size: $font-medium;
     padding-bottom: 30px;
@@ -43,7 +49,7 @@ $font-question:'Indie Flower', cursive;
     border-radius: 25px;
 }
 
-.border-btn {
+@mixin border-btn {
     border: 2px solid $color-border;
     border-radius: 5px;
 }
@@ -56,14 +62,27 @@ $font-question:'Indie Flower', cursive;
     font-size: $font-small;
     font-family: $font-sub-heading;
     background-color: $color-btn;
-    border: 2px solid $color-border;
-    border-radius: 5px;
+    @include border-btn;
     text-shadow: none;
     text-align: center;
 }
 
-.btn-disabled {
+@mixin btn-disabled {
     background-color:$color-panel-background;
     color: #6c757d;
-    @extend .border-btn
+    @include border-btn;
+}
+
+@mixin btn-small {
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    color: $color-font;
+    font-size: $font-media-small;
+    font-family: $font-sub-heading;
+    background-color: $color-btn;
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    text-shadow: none;
+    text-align: center;
 }

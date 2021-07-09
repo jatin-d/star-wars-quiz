@@ -5,7 +5,7 @@ button {
     @extend .btn-primary; 
 }
 button:disabled {
-    @extend .btn-disabled;
+    @include btn-disabled;
 }
 
 .appContainer{
@@ -20,20 +20,51 @@ button:disabled {
         @include textParameters;
         font-size: $font-large;
         font-family: $font-heading;
+        text-align: center;
     }
     h2 {
         @include textParameters;
         font-size: $font-medium;
         font-family: $font-sub-heading;
-        color: $color-fontSecondary
+        color: $color-fontSecondary;
+        text-align: center;
     }
     p {
         @include textParameters;
         font-size: $font-small;
         padding: 0;
+        text-align: center;
+    }
+    .currectAnsNum{
+        color: $color-trueAns;
+    }
+    .totalAnsNum{
+        color: $color-tertiary;
+    }
+    .resetButton{
+        margin: 0;
     }
 }
 
 .navigationButtonsContainer, .submitButtonContainer{
     @include flexParameters;
+}
+
+
+@media (max-width:768px){
+    .appContainer{
+        padding: 15px;
+        h1 {
+            font-size: $font-media-large;
+        }
+        h2 {
+            font-size: $font-media-medium;
+        }
+        button {
+            @include btn-small;
+        }
+        button:disabled {
+            @include btn-disabled;
+        }
+    }
 }

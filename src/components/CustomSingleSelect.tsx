@@ -7,16 +7,17 @@ const CustomSingleSelect: React.FC<{ currentQuestion: SingleSelect, parentState:
     let question = props.currentQuestion;
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+
         let userAnswer = {
             question: question.topic,
             userAnswer: (event.target as any).value,
             correctAnswer: question.correctAnswer,
             matches: (event.target as any).value.toLowerCase() === question.correctAnswer.toLowerCase()
         }
-        let trueAnsCounter = userAnswer.matches ? props.parentState.trueAnsCounter + 1 : props.parentState.trueAnsCounter;
+
         let ansObj = props.parentState.answer
         ansObj[question.id] = userAnswer
-        props.updateState({ counter: props.parentState.counter, trueAnsCounter: trueAnsCounter, answer: ansObj })
+        props.updateState({ counter: props.parentState.counter, trueAnsCounter: props.parentState.trueAnsCounter, answer: ansObj })
     }
     return (
         <div className='questionWrapper'>

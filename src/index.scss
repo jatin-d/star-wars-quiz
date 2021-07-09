@@ -16,3 +16,9 @@ body {
   background-color: $color-background;
   color: $color-font;
 }
+
+@media (max-width:768px){
+  body{
+    margin: 8px;
+  }
+}

@@ -5,8 +5,10 @@ import { TextInput } from '../utility/utils'
 import { ApplicationState } from '../utility/utils'
 
 const CustomTextInput: React.FC<{ currentQuestion: TextInput, parentState: ApplicationState, updateState: React.Dispatch<ApplicationState> }> = props => {
+
     const question = props.currentQuestion
     const inputRef = useRef<HTMLInputElement>(null)
+
     const inputChangeHandler = () => {
         if (inputRef.current && (inputRef.current.value !== "" || (props.parentState.answer[question.id].userAnswer !== "" && inputRef.current.value === ""))) {
             let ansObj = props.parentState.answer;
@@ -18,14 +20,14 @@ const CustomTextInput: React.FC<{ currentQuestion: TextInput, parentState: Appli
                     question: question.topic,
                     userAnswer: inputRef.current.value,
                     correctAnswer: question.correctAnswer,
-                    matches: inputRef.current.value.toLowerCase() === question.correctAnswer.toLowerCase()
+                    matches: inputRef.current.value.toLowerCase().trim() === question.correctAnswer.toLowerCase()
                 }
-                let trueAnsCounter = userAnswer.matches ? props.parentState.trueAnsCounter + 1 : props.parentState.trueAnsCounter;
                 ansObj[question.id] = userAnswer
-                props.updateState({ counter: props.parentState.counter, trueAnsCounter: trueAnsCounter, answer: ansObj })
+                props.updateState({ counter: props.parentState.counter, trueAnsCounter: props.parentState.trueAnsCounter, answer: ansObj })
             }
         }
     }
+
     return (
         <div className='questionWrapper'>
             <p className='question' data-test='que-srting'>{question.topic}</p>

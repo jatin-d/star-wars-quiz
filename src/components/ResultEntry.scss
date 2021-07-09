@@ -1,7 +1,7 @@
 @import "../styles/stylesUtils.scss";
 
 .resultCard{
-    @extend .border-btn;
+    @include border-btn;
     padding: 10px;
     background-color: $color-panel-background;
     margin: 10px 0;
@@ -20,4 +20,14 @@
     .quePrompt{
       color: aqua;
     }
+}
+
+@media (max-width:768px){
+  .resultCard{
+    padding: 8px;
+    margin: 8px 0;
+      p{
+        font-size: $font-media-small;
+      }
+  }
 }

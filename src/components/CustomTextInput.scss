@@ -3,8 +3,8 @@
 .questionWrapper{
     @include flexParameters;
     flex-direction: column;
-    .question{
-        @extend .question
+    p {
+        @include question
     }
     .textArea {
         -webkit-appearance: none;
@@ -17,5 +17,16 @@
         height: 100px;
         font-size: $font-large;
         font-family: $font-options;
+    }
+}
+
+@media (max-width:768px){
+    .questionWrapper{
+        p {
+            font-size: $font-media-medium;
+        }
+        .textArea {
+            width: 250px;
+        }
     }
 }
