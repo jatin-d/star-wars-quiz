@@ -24,4 +24,4 @@
 2. execute `cd star-wars-quiz` to go to project dir
 3. execute `npm install` which will pull required dependencies
 4. execute `npm start` to run the app and visit `http://localhost:3000` to test the app
-5. execute `npm test` to run unit tests for the app
+5. execute `npm test` and press `a` when prompted to run unit tests for the app
